@@ -286,5 +286,10 @@ In case you forgot to commit a change and would like to add it to your previous 
 -Push-
 
 When you're ready to share your changes with your team members, click the Push button in the Status Bar tooltip. If your local branch doesn't exist on the remote repository, Atom will offer to create a remote branch for you.
+
+-Pull-
+
+Click on the Fetch button to see if anyone made changes. Pull to get the changes into your local branch.
+
 ===================================================================================================================
 <Hacking Atom> <Behind Atom> requires JavaScript and CSS.
