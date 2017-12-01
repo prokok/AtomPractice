@@ -19,9 +19,9 @@ Hide Tree View - tree-view:toggle Command Palette
 
 5.
 Tree View Focus - Alt + \
-  A : Adddelete files and folders
-  M : Move delete files and folders
-  Delete : delete files and folders
+	A : Adddelete files and folders
+	M : Move delete files and folders
+	Delete : delete files and folders
 
 6.
 Opening a File in a Project
@@ -110,3 +110,100 @@ Ctrl+Click - Add a new cursor at the clicked location
 Alt+Ctrl+Up/Down - Add another cursor above/below the current cursor
 Ctrl+D - Select the next word in the document that is the same as the currently selected word
 Alt+F3 - Select all words in the document that are the same as the currently selected word
+
+5. Find and REPLACE
+
+Ctrl + F - Search within a buffer
+Ctrl + Shift + F - Search the entire project
+
+6. Snippet
+
+Snippets are an incredibly powerful way to quickly generate commonly needed code syntax from a shortcut.
+
+The idea is that you can type something like habtm and then press the Tab key and it will expand into has_and_belongs_to_many.
+
+Many Core and Community packages come bundled with their own snippets that are specific to it. For example, the language-html package that provides support for HTML syntax highlighting and grammar comes with dozens of snippets to create many of the various HTML tags you might want to use. If you create a new HTML file in Atom, you can type html and then press Tab and it will expand to:
+
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+</html>
+
+It will also position the cursor in the middle of the title tag so you can immediately start filling out the tag. Many snippets have multiple focus points that you can move through with the Tab key as well - for instance, in the case of this HTML snippet, once you've filled out the title tag you can press Tab and the cursor will move to the middle of the body tag.
+
+7. Autocomplete
+The autocomplete system lets you view and insert possible completions in the editor using Tab or Enter.
+
+8. Folding
+If you want to see an overview of the structure of the code file you're working on, folding can be a helpful tool. Folding hides blocks of code such as functions or looping blocks in order to simplify what is on your screen.
+
+You can fold blocks of code by clicking the arrows that appear when you hover your mouse cursor over the gutter. You can also fold and unfold from the keyboard with the Alt+Ctrl+[ and Alt+Ctrl+] keybindings.
+
+To fold everything, use Alt+Ctrl+Shift+[ and to unfold everything use Alt+Ctrl+Shift+]. You can also fold at a specific indentation level with Ctrl+K Ctrl+0-9 where the number is the indentation depth.
+
+Finally, you can fold arbitrary sections of your code or text by making a selection and then typing Alt+Ctrl+F or choosing "Fold Selection" in the Command Palette.
+
+9. Panes
+
+You can split any editor pane horizontally or vertically by using Ctrl+K Up/Down/Left/Right where the direction key is the direction to split the pane. Once you have a split pane, you can switch between them with Ctrl+K Ctrl+Up/Down/Left/Right where the direction is the direction the focus should move to.
+
+Each pane has its own "pane items", which are represented by tabs. You can move the files from pane to pane by dragging them with the mouse and dropping them in the pane you want that file to be in.
+
+If you don't like using tabs, you don't have to. You can disable the tabs package and each pane will still support multiple pane items. You just won't have tabs to use to click between them.
+To close a pane, you can close all pane items with Ctrl+W. You can configure whether panes auto-close when empty in the Settings View with the "Remove Empty Panes" setting under Core Settings.
+
+10. Pending Pane Items
+
+"Pending Pane Items" were formerly referred to as "Preview Tabs"
+
+When you open a new file by single-clicking in the Tree View, it will open in a new tab with an italic title. This indicates that the file is "pending". When a file is pending, it will be replaced by the next pending file that is opened. This allows you to click through a bunch of files to find something without having to go back and close them all.
+
+You can confirm a pending file by doing any of the following:
+
+Double-clicking the tab of the file
+Double-clicking the file in the tree view
+Editing the contents of the file
+Saving the file
+You can also open a file already confirmed by double-clicking it in the tree view instead of single-clicking it.
+
+11. Grammar
+
+The "grammar" of a file is what language Atom has associated with that file. Types of grammars would include "Java" or "GitHub-Flavored Markdown". We looked at this a bit when we created some snippets in Snippets.
+
+When you load a file, Atom does a little work to try to figure out what type of file it is. Largely this is accomplished by looking at its file extension (.md is generally a Markdown file, etc), though sometimes it has to inspect the content a bit to figure it out.
+
+When you open a file and Atom can't determine a grammar for the file, it will default to "Plain Text", which is the simplest one. If it does default to "Plain Text", picks the wrong grammar for the file, or if for any reason you wish to change the selected grammar, you can pull up the Grammar Selector with Ctrl+Shift+L.
+
+When the grammar of a file is changed, Atom will remember that for the current session.
+The Grammar Selector functionality is implemented in the grammar-selector package.
+
+12. Version Control in atom
+
+Version control is an important aspect of any project and Atom comes with basic Git and GitHub integration built in.
+In order to use version control in Atom, the project root needs to contain the Git repository.
+
+Checkout HEAD revision
+
+The Alt+Ctrl+Z keybinding checks out the HEAD revision of the file in the editor.
+This is a quick way to discard any saved and staged changes you've made and restore the file to the version in the HEAD commit. This is essentially the same as running git checkout HEAD -- <path> and git reset HEAD -- <path> from the command line for that path.
+This command goes onto the undo stack so you can use Ctrl+Z afterwards to restore the previous contents.
+
+Git status list
+
+Atom ships with the fuzzy-finder package which provides Ctrl+T to quickly open files in the project and Ctrl+B to jump to any open editor. The package also provides Ctrl+Shift+B which displays a list of all the untracked and modified files in the project. These will be the same files that you would see on the command line if you ran git status.
+An icon will appear to the right of each file letting you know whether it is untracked or modified.
+
+Commit editor
+
+Atom can be used as your Git commit editor and ships with the language-git package which adds syntax highlighting to edited commit, merge, and rebase messages.	
+
+You can configure Atom to be your Git commit editor with the following command:
+The language-git package will help remind you to be brief by colorizing the first lines of commit messages when they're longer than 50 or 65 characters.
+
+
+===================================================================================================================
+<Hacking Atom> <Behind Atom> requires JavaScript and CSS.
