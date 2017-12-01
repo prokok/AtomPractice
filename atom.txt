@@ -1,0 +1,112 @@
+=======================================================================================================================
+<Atom Basics>
+http://flight-manual.atom.io/getting-started/
+
+1.Command Palette - Ctrl + Shift + P
+
+2.
+Open file - Ctrl + O
+Save file - Ctrl + S
+Create/Open a file through terminal: atom name.extension
+
+3.
+Opening Directories: Ctrl + Shift + A
+Create/Open a directories through terminal: atom ../directory name
+
+4.
+Hide Tree View - Ctrl + \
+Hide Tree View - tree-view:toggle Command Palette
+
+5.
+Tree View Focus - Alt + \
+  A : Adddelete files and folders
+  M : Move delete files and folders
+  Delete : delete files and folders
+
+6.
+Opening a File in a Project
+
+Ctrl + T or Ctrl + P : Fuzzy Finder will pop up. search for any file in your project opened in Atom by typing parts of the path.
+Ctrl + B : search through only the files currently opened (rather than every file in your project) . This searches through your "buffers" or open files.
+Ctrl + Shift + B : searches only through the files which are new or have been modified since your last Git commit.
+
+
+The fuzzy finder uses the core.ignoredNames, fuzzy-finder.ignoredNames and core.excludeVCSIgnoredPaths configuration settings to filter out files and folders that will not be shown. If you have a project with tons of files you don't want it to search through, you can add patterns or paths to either of these config settings or your standard .gitignore files. We'll learn more about config settings in Global Configuration Settings, but for now you can easily set these in the Settings View under Core Settings.
+
+Both core.ignoredNames and fuzzy-finder.ignoredNames are interpreted as glob patterns as implemented by the minimatch Node module.
+
+-Configuration Setting Notation-
+
+Sometimes you'll see us refer to configuration settings all spelled out like "Ignored Names in Core Settings". Other times you'll see us use the shorthand name like core.ignoredNames. Both of these refer to the same thing. The shorthand is the package name, then a dot ., followed by the "camel-cased" name of the setting.
+
+If you have a phrase you want to camel-case, follow these steps:
+1. Lowercase the first word
+2. Capitalize the first letter in all other words
+3. Remove the spaces
+So "Ignored Names" becomes "ignoredNames".
+
+==================================================================================================
+<Using Atom>
+
+1. Packages
+Packages Settings
+Theme Settings
+Ctrl + , : settings
+
+apm view <package_name> : see more information about a specific package.
+Install Packages through Terminal : apm help install
+apm install <package_name> : to install the latest version.
+apm install <package_name>@<package_version> : to install a specific version.
+apm search <package_name> : search the package registry for a search term.
+
+2. Movings
+
+Ctrl + Left - Move to the beginning of word
+Ctrl + Right - Move to the end of word
+Home - Move to the first character of the current line
+End - Move to the end of the line
+Ctrl + Home - Move to the top of the file
+Ctrl + End - Move to the bottom of the file
+
+Ctrl + G - Move directly to a specific line (and column) number with . Also use the row:column syntax to jump to a character in that line as well.
+
+-Navigating by Symbols-
+You can also jump around a little more informatively with the Symbols View. To jump to a symbol such as a method definition.
+Ctrl + R - Opens a list of all symbols in the current file
+TAG Files
+BOOKMARKS
+
+3. Atom Selections
+
+Shift+Up - Select up
+Shift+Down - Select down
+Shift+Left - Select previous character
+Shift+Right - Select next character
+Ctrl+Shift+Left - Select to beginning of word
+Ctrl+Shift+Right - Select to end of word
+Shift+End - Select to end of line
+Shift+Home - Select to first character of line
+Ctrl+Shift+Home - Select to top of file
+Ctrl+Shift+End - Select to bottom of file
+
+In addition to the cursor movement selection commands, there are also a few commands that help with selecting specific areas of content.
+
+Ctrl+A - Select the entire contents of the file
+Ctrl+L - Select the entire line
+
+4. Editing and Deleting Text
+
+Ctrl+J - Join the next line to the end of the current line
+Ctrl+Up/Down - Move the current line up or down
+Ctrl+Shift+D - Duplicate the current line
+Ctrl+K Ctrl+U - Upper case the current word
+Ctrl+K Ctrl+L - Lower case the current word
+
+Ctrl+Shift+K - Delete current line
+Ctrl+Backspace - Delete to beginning of word
+Ctrl+Delete - Delete to end of word
+
+Ctrl+Click - Add a new cursor at the clicked location
+Alt+Ctrl+Up/Down - Add another cursor above/below the current cursor
+Ctrl+D - Select the next word in the document that is the same as the currently selected word
+Alt+F3 - Select all words in the document that are the same as the currently selected word
