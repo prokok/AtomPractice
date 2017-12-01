@@ -291,5 +291,31 @@ When you're ready to share your changes with your team members, click the Push b
 
 Click on the Fetch button to see if anyone made changes. Pull to get the changes into your local branch.
 
+-Resolve conflicts-
+
+Sometimes there can be conflicts when trying to merge. Files that have merge conflicts will show up in the "Merge Conflicts" list. Click on a file to open the editor. There you can resolve the conflict by picking a version or make further edits. Once done, stage the file and commit.
+
+-View Pull Requests-
+
+If there is a Pull Request for your current branch, you can see its status in the "GitHub" panel. Click on Conversation to see the timeline.
+
+14. Writing in Atom
+
+Though it is probably most common to use Atom to write software code, Atom can also be used to write prose quite effectively. Most often this is done in some sort of markup language such as Asciidoc or Markdown (in which this manual is written). Here we'll quickly cover a few of the tools Atom provides for helping you write prose.
+
+In these docs, we'll concentrate on writing in Markdown; however, other prose markup languages like Asciidoc have packages that provide similar functionality.
+
+Ctrl + Shift + M  Will toggle Preview mode for Markdown.
+
+Snippets
+
+If you type img and hit tab you get a Markdown-formatted image embed code like ![](). If you type table and hit tab you get a nice example table to fill out.
+
+| Header One     | Header Two     |
+| :------------- | :------------- |
+| Item One       | Item Two       |
+
+Although there are only a handful of Markdown snippets (b for bold, i for italic, code for a code block, etc), they save you from having to look up the more obscure syntaxes. Again, you can easily see a list of all available snippets for the type of file you're currently in by choosing "Snippets: Available" in the Command Palette.
+
 ===================================================================================================================
 <Hacking Atom> <Behind Atom> requires JavaScript and CSS.
